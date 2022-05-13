@@ -5,10 +5,10 @@ import java.util.Objects;
 @Data
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "sedan")
+@ToString
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,44 +20,13 @@ public class Car {
 //    protected Car() {
 //    }
 //
-//
-//    public Car(String make, String model, double year) {
-//        this.make = make;
-//        this.model = model;
-//        this.year = year;
-//    }
 
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public void setId(Long newId) {
-//        this.id = newId;
-//    }
-//
-//    public String getMake() {
-//        return make;
-//    }
-//
-//    public void setMake(String newMake) {
-//        this.make = newMake;
-//    }
-//
-//    public String getModel() {
-//        return model;
-//    }
-//
-//    public void setModel(String newModel) {
-//        this.model = newModel;
-//    }
-//
-//    public double getYear() {
-//        return year;
-//    }
-//
-//    public void setYear(double newYear) {
-//        this.year = newYear;
-//    }
+    public Car(String make, String model, double year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
 
     @Override
     public boolean equals(Object obj) {
@@ -72,7 +41,7 @@ public class Car {
 
     @Override
     public int hashCode() {
-        return Objects.hash(make, model);
+        return Objects.hash(make, model, year);
     }
 
 }

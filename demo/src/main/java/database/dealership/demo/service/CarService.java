@@ -15,4 +15,10 @@ public class CarService {
     public List<Car> getCars() {
         return carRepository.findAll();
     }
+
+    public Car saveCar(Car car){
+        return carRepository.save(car);
+
+    }
+
 }

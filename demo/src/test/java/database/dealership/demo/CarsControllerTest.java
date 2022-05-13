@@ -3,6 +3,7 @@ package database.dealership.demo;
 import database.dealership.demo.controller.CarController;
 import database.dealership.demo.entity.Car;
 import database.dealership.demo.repo.CarRepository;
+import database.dealership.demo.service.CarService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -24,10 +25,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "http://localhost:8080/dealership")
 public class CarsControllerTest {
     @Autowired
     private MockMvc mockMvc;
+
+    @Mock
+    private CarService carService;
+
 
     @Mock
     private CarRepository carRepository;
@@ -38,7 +43,7 @@ public class CarsControllerTest {
 
     @BeforeEach
     public void controllerSetup() {
-        carController.setCarRepository(carRepository);
+        carController.setCarService(carService);
     }
 
     @RequestMapping
@@ -50,7 +55,7 @@ public class CarsControllerTest {
 
         Car expectedCar = new Car(make, model, year);
 //
-        String carJson = "{\"id\":1,\"make\":\"" + make + "\",\"entity\":\"" + model + "\",\"year\":" + year + "}";
+        String carJson = "{\"id\":1,\"make\":\"" + make + "\",\"model\":\"" + model + "\",\"year\":" + year + "}";
 
         System.out.println(carJson);
         MvcResult res = this.mockMvc.perform(post("/dealership")

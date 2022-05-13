@@ -9,10 +9,10 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class DealershipsApplication {
-	private static boolean populatedDB = false;
+	private static final boolean populatedDB = true;
 
 	public static void main(String[] args) {
-		populatedDB = args != null && args.length >= 1 && "populate".equals(args[0]);
+//		populatedDB = args != null && args.length >= 1 && "populate".equals(args[0]);
 		SpringApplication.run(DealershipsApplication.class, args);
 	}
 
@@ -25,7 +25,7 @@ public class DealershipsApplication {
 				carRepository.save(new Car("Lexus", "ES 300H", 2021));
 
 				for (Car sedan : carRepository.findAll()) {
-					System.out.println(sedan.toString());
+					System.out.println(sedan);
 				}
 //				System.out.println("");
 			}
