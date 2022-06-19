@@ -18,7 +18,6 @@ public class CarService {
 
     public Car saveCar(Car car){
         return carRepository.save(car);
-
     }
 
 }

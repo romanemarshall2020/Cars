@@ -52,10 +52,12 @@ public class CarsControllerTest {
         String make = ("Toyota");
         String model = ("Camry");
         double year = (2017);
+        long vin = (67900);
+        String color = ("Pink");
 
-        Car expectedCar = new Car(make, model, year);
+        Car expectedCar = new Car(make, model, year, vin, color);
 //
-        String carJson = "{\"id\":1,\"make\":\"" + make + "\",\"model\":\"" + model + "\",\"year\":" + year + "}";
+        String carJson = "{\"id\":1,\"make\":\"" + make + "\",\"model\":\"" + model + "\",\"year\":" + year + "\",\"vin\":" + vin + "\",\"color\":" + vin + "\"}";
 
         System.out.println(carJson);
         MvcResult res = this.mockMvc.perform(post("/dealership")
