@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 // imported sedan Object
-import {Car} from "src/app/models/car";
+import { Car } from 'src/app/models/car/car';
 import { Observable } from 'rxjs';
 
 
