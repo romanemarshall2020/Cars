@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { CarService } from 'src/service/car.service';
-import { Car } from '../car';
+import { Car } from '../models/car';
 
 
 @Component({
@@ -11,23 +11,21 @@ import { Car } from '../car';
 })
 export class InventoryComponent implements OnInit {
 
-  cars: any;
+  cars: Car[] | undefined
 
- // constructor(private carService: CarService) {
-    //this.carService.findAll().subscribe(data => {
-     // this.cars = data
-   // })
-  //}
-    constructor(private http: HttpClient) {
-
+ constructor(private carService: CarService) {
+    // this.carService.findAll().subscribe(data => {
+    //  this.cars = data
+  //  })
   }
 
 
 
-  ngOnInit(): void {
-  let repsonse = this.http.get("http://localhost:4200/");
-  repsonse.subscribe((data) => this.cars=repsonse)
 
+  ngOnInit(): void {
+     this.carService.findAll().subscribe(data => {
+      this.cars = data
+    })
   }
 
 }

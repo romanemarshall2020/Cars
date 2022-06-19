@@ -65,7 +65,7 @@ public class CarsControllerTest {
                 .andExpect(status().isCreated())
                 .andReturn();
                 System.out.println(res);
-        Mockito.verify(carRepository).save(expectedCar);
+        Mockito.verify(carService).saveCar(expectedCar);
 
 
 

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 // imported sedan Object
-import {Car} from "src/app/car";
+import {Car} from "src/app/models/car";
 import { Observable } from 'rxjs';
 
 
@@ -11,11 +11,11 @@ import { Observable } from 'rxjs';
 })
 export class CarService {
 
-  private carsURL: string;
+  carsURL: string = "http://localhost:8080/dealership";
 
 
   constructor(private http: HttpClient) {
-    this.carsURL = "http://localhost:8080/dealership"
+    this.findAll().subscribe
   }
 
   public findAll(): Observable<Car[]> {

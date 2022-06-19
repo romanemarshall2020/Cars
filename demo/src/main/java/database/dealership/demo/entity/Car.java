@@ -5,7 +5,7 @@ import java.util.Objects;
 @Data
 @Getter
 @Setter
-@NoArgsConstructor
+//@NoArgsConstructor
 @Entity
 @Table(name = "sedan")
 @ToString
@@ -17,10 +17,12 @@ public class Car {
     private String model;
     private double year;
 
-//    protected Car() {
-//    }
+    // the value of protected classes can not be changed, but can be used outside of their classes
+    protected Car() {
+    }
 //
 
+    // Basically determines the structure of the data you are querying
     public Car(String make, String model, double year) {
         this.make = make;
         this.model = model;
