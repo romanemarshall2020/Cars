@@ -1,7 +1,7 @@
 // import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { CarService } from 'src/service/car.service';
-import { Car } from '../models/car/car';
+import { Car } from '../../models/car/car';
 
 
 @Component({
