@@ -1,6 +1,29 @@
-/* ::ng-deep ul navbar-nav {
+::ng-deep #navbarNav {
   position: relative !important;
-  align-content: center !important;
-  background-color: red;
+  justify-content: center;
+}
+
+/* ::ng-deep .nav-item{
 
 } */
+
+::ng-deep .navbar-brand {
+  position: relative;
+  font-size: 40px !important;
+  /* background-color: aqua; */
+  padding-top: 0px !important;
+  font-weight: 300 !important;
+  /* font-family: "Audiowide", sans-serif; */
+}
+
+li {
+  margin-left: 300px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+::ng-deep .brand-container .navbar-brand{
+  position: relative !important;
+  size: 30px !important;
+  left: 50px;
+}
