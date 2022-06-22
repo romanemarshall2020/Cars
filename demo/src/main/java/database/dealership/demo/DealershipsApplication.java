@@ -1,7 +1,9 @@
 package database.dealership.demo;
 
 import database.dealership.demo.entity.Car;
+import database.dealership.demo.entity.Customer;
 import database.dealership.demo.repo.CarRepository;
+import database.dealership.demo.repo.CustomerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -33,4 +35,12 @@ public class DealershipsApplication {
 		};
 	}
 
+	@Bean
+	public CommandLineRunner init(CustomerRepository customerRepository) {
+		return (args) -> {
+			if(customerRepository.count() = 0 && populatedDB) {
+				customerRepository.save(new Customer("Romane", "Marshall", "579 Ridgewood Court, Atlanta, GA, 38776", '1993-07-05', 29192873 ))
+			}
+		}
+	}
 }
