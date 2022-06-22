@@ -2,7 +2,7 @@ package database.dealership.demo.entity;
 import lombok.*;
 import javax.persistence.*;
 import java.util.Objects;
-import java.time.LocalDate;
+//import java.time.LocalDate;
 
 @Data
 @Getter
@@ -13,17 +13,18 @@ import java.time.LocalDate;
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String firstName;
     private String lastName;
     private String address;
-    private LocalDate dob;
+    private String dob;
     private int acctNum;
 
     protected Customer() {
     }
 
 
-    public Customer(String firstName, String lastName, String address, LocalDate dob, int acctNum) {
+    public Customer(String firstName, String lastName, String address, String dob, int acctNum) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
