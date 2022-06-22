@@ -13,22 +13,22 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">VIN</th>
-        <th scope="col">Make</th>
-        <th scope="col">Model</th>
-        <th scope="col">Year</th>
-        <th scope="col">Color</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">address</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Acct. Num</th>
 
       </tr>
     </thead>
     <tbody class="">
-      <tr *ngFor="let car of cars">
-        <th scope="row">{{car.id}}</th>
-        <td>{{car.vin}}</td>
-        <td>{{car.make}}</td>
-        <td>{{car.model}}</td>
-        <td>{{car.year}}</td>
-        <td>{{car.color}}</td>
+      <tr *ngFor="let customer of customers">
+        <th scope="row">{{customer.id}}</th>
+        <td>{{customer.firstName}}</td>
+        <td>{{customer.lastName}}</td>
+        <td>{{customer.address}}</td>
+        <td>{{customer.dob}}</td>
+        <td>{{customer.acctNum}}</td>
       </tr>
 
 

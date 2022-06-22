@@ -16,11 +16,12 @@
     </ng-template>
   </li>
   <li ngbNavItem>
-    <a ngbNavLink>Search</a>
-    <ng-template ngbNavContent>Search functionality here</ng-template>
+    <a ngbNavLink>Customers</a>
+    <ng-template ngbNavContent><app-cust-page></app-cust-page></ng-template>
   </li>
 </ul>
 <div [ngbNavOutlet]="nav"></div>
+
 <!--
   Footer Begins
 -->
@@ -83,10 +84,11 @@
   </div>
   <!-- Footer Links -->
 
+  <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2020 Copyright:
     <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
   </div>
-
+  <!-- Copyright -->
 
 </footer>
 
