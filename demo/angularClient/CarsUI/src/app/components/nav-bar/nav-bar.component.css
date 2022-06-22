@@ -1,11 +1,25 @@
 ::ng-deep #navbarNav {
   position: relative !important;
   justify-content: center;
+  pointer-events: all;
+
 }
 
-/* ::ng-deep .nav-item{
+.nav-item {
+  -webkit-filter: brightness(50%);
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-o-transition: all 1s ease;
+-ms-transition: all 1s ease;
+transition: all 1s ease;
+}
 
-} */
+
+
+.nav-item :hover{
+  -webkit-filter: brightness(100%);
+}
+
 
 ::ng-deep .navbar-brand {
   position: relative;
