@@ -5,7 +5,6 @@ import java.util.Objects;
 @Data
 @Getter
 @Setter
-//@NoArgsConstructor
 @Entity
 @Table(name = "sedan")
 @ToString
