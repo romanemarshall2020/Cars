@@ -12,19 +12,23 @@ public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @ToString.Include
     private String make;
     private String model;
-    private double year;
-    private long vin;
+    private int year;
+    private String vin;
     private String color;
 
     // the value of protected classes can not be changed, but can be used outside of their classes
     protected Car() {
     }
-//
+//    public String toString() {
+//        return "i am car";
+//    }
+
 
     // Basically determines the structure of the data you are querying
-    public Car(String make, String model, double year, long vin, String color) {
+    public Car(String make, String model, int year, String vin, String color) {
         this.make = make;
         this.model = model;
         this.year = year;

@@ -30,10 +30,10 @@ public class DealershipsApplication {
 				}
 			}
 			if(carRepository.count() == 0 && populatedDB) {
-				carRepository.save(new Car("Acura", "ILX", 2016, 67909, "Red"));
-				carRepository.save(new Car("Honda", "Accord", 2021, 30213, "Green"));
-				carRepository.save(new Car("Lexus", "ES 300H", 2021, 65876, "Blue"));
-				carRepository.save(new Car("Acura", "ILX", 2019, 78433, "Black"));
+				carRepository.save(new Car("Acura", "ILX", 2016, "67909", "Red"));
+				carRepository.save(new Car("Honda", "Accord", 2021, "30213", "Green"));
+				carRepository.save(new Car("Lexus", "ES 300H", 2021, "65876", "Blue"));
+				carRepository.save(new Car("Acura", "ILX", 2019, "78433", "Black"));
 
 				for (Car sedan : carRepository.findAll()) {
 					System.out.println(sedan);
