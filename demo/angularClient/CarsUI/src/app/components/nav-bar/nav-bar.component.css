@@ -2,6 +2,7 @@
   position: relative !important;
   justify-content: center;
   pointer-events: all;
+  width: 100%;
 
 }
 
@@ -38,6 +39,5 @@ li {
 
 ::ng-deep .brand-container .navbar-brand{
   position: relative !important;
-  size: 30px !important;
   left: 50px;
 }
