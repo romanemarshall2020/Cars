@@ -12,7 +12,7 @@ public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @ToString.Include
+//    @ToString.Include
     private String make;
     private String model;
     private int year;
