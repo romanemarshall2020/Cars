@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+ import { Component, OnInit } from '@angular/core';
+import { Customer } from 'src/app/models/customer/customer';
 import { CustomerService } from 'src/service/customerService/customer.service';
-import { Customer } from '../models/customer/customer';
+
 
 
 

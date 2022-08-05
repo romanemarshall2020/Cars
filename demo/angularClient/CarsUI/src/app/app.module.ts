@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { InventoryComponent } from './components/inventory/inventory.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { CustPageComponent } from './cust-page/cust-page.component';
+import { CustPageComponent } from './components/cust-page/cust-page.component';
 import { CustomerService } from 'src/service/customerService/customer.service';
 
 
