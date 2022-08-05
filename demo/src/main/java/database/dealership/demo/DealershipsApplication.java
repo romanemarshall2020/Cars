@@ -19,26 +19,26 @@ public class DealershipsApplication {
 	}
 
 
-	@Bean
-	public CommandLineRunner init(CustomerRepository customerRepository, CarRepository carRepository) {
-		return (args) -> {
-			if(customerRepository.count() == 0 && populatedDB) {
-				customerRepository.save(new Customer("Romane", "Marshall", "579 Ridgewood Court, Atlanta, GA, 38776", "07-05-1993", 29192873 ));
-
-				for(Customer buyer : customerRepository.findAll()){
-					System.out.println(buyer);
-				}
-			}
-			if(carRepository.count() == 0 && populatedDB) {
-				carRepository.save(new Car("Acura", "ILX", 2016, "67909", "Red"));
-				carRepository.save(new Car("Honda", "Accord", 2021, "30213", "Green"));
-				carRepository.save(new Car("Lexus", "ES 300H", 2021, "65876", "Blue"));
-				carRepository.save(new Car("Acura", "ILX", 2019, "78433", "Black"));
-
-				for (Car sedan : carRepository.findAll()) {
-					System.out.println(sedan);
-				}
-			}
-		};
-	}
+//	@Bean
+//	public CommandLineRunner init(CustomerRepository customerRepository, CarRepository carRepository) {
+////		return (args) -> {
+////			if(customerRepository.count() == 0 && populatedDB) {
+////				customerRepository.save(new Customer("Romane", "Marshall", "579 Ridgewood Court, Atlanta, GA, 38776", "07-05-1993", 29192873 ));
+////
+////				for(Customer buyer : customerRepository.findAll()){
+////					System.out.println(buyer);
+////				}
+////			}
+////			if(carRepository.count() == 0 && populatedDB) {
+////				carRepository.save(new Car("Acura", "ILX", 2016, "67909", "Red"));
+////				carRepository.save(new Car("Honda", "Accord", 2021, "30213", "Green"));
+////				carRepository.save(new Car("Lexus", "ES 300H", 2021, "65876", "Blue"));
+////				carRepository.save(new Car("Acura", "ILX", 2019, "78433", "Black"));
+////
+////				for (Car sedan : carRepository.findAll()) {
+////					System.out.println(sedan);
+////				}
+////			}
+////		};
+//	}
 }

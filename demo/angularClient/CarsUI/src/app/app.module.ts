@@ -11,6 +11,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { CustPageComponent } from './components/cust-page/cust-page.component';
 import { CustomerService } from 'src/service/customerService/customer.service';
+import { NewEntryComponent } from './components/new-entry/new-entry.component';
+import { NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
 
 
 @NgModule({
@@ -19,6 +21,7 @@ import { CustomerService } from 'src/service/customerService/customer.service';
     InventoryComponent,
     NavBarComponent,
     CustPageComponent,
+    NewEntryComponent,
 
   ],
   imports: [
@@ -26,6 +29,8 @@ import { CustomerService } from 'src/service/customerService/customer.service';
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
+    NgBootstrapFormValidationModule.forRoot(),
+    NgBootstrapFormValidationModule
   ],
   providers: [CarService, CustomerService],
   bootstrap: [AppComponent]

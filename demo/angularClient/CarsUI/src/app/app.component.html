@@ -19,6 +19,10 @@
     <a ngbNavLink>Customers</a>
     <ng-template ngbNavContent><app-cust-page></app-cust-page></ng-template>
   </li>
+  <li ngbNavItem>
+    <a ngbNavLink>add</a>
+    <ng-template ngbNavContent><app-new-entry></app-new-entry></ng-template>
+  </li>
 </ul>
 <div [ngbNavOutlet]="nav"></div>
 
